@@ -1,0 +1,17 @@
+plugin/
+dein
+tags*
+.netrwhist
+pythonpath.vim
+nodepath.vim
+autoload/plugged/*
+vimspector-config/gadgets/*
+paths.vim
+session
+wiki/
+pack/
+lua-language-server/
+.language-servers/
+spell/
+nv-settings.lua
+lv-settings.lua
