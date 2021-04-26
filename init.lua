@@ -1,5 +1,8 @@
 require('plugins')
-require('lv-globals')
+require('globals')
 require('keymappings')
 require('settings')
 require('colorscheme')
+
+-- Plugin configuration
+require('nvimtree')
