@@ -71,6 +71,10 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
+  gruvbox = {
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/gruvbox"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/packer.nvim"

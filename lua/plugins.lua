@@ -36,5 +36,10 @@ return require("packer").startup(
         use "wbthomason/packer.nvim"
 
         use 'morhetz/gruvbox'
+
+    -- Explorer
+        use "kyazdani42/nvim-tree.lua"
+    -- TODO remove when open on dir is supported by nvimtree
+        use "kevinhwang91/rnvimr"
     end
 )
