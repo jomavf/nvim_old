@@ -75,22 +75,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+  },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons"
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/packer.nvim"
-  },
-  rnvimr = {
-    loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/rnvimr"
   }
 }
 

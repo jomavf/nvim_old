@@ -36,11 +36,11 @@ return require("packer").startup(
         use "wbthomason/packer.nvim"
 
         use 'morhetz/gruvbox'
-
     -- Explorer
-        use { "kyazdani42/nvim-web-devicons", opt = true }
+        use { "kyazdani42/nvim-web-devicons" }
         use "kyazdani42/nvim-tree.lua"
-    -- TODO remove when open on dir is supported by nvimtree
-        use "kevinhwang91/rnvimr"
+	-- LSP
+		use { "neovim/nvim-lspconfig" }
+		use 'kabouzeid/nvim-lspinstall'
     end
 )
