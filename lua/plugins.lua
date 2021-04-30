@@ -37,10 +37,11 @@ return require("packer").startup(
 
         use 'morhetz/gruvbox'
     -- Explorer
-        use { "kyazdani42/nvim-web-devicons" }
         use "kyazdani42/nvim-tree.lua"
-	-- LSP
+        use { "kyazdani42/nvim-web-devicons" }
+    -- LSP
+		use { 'kabouzeid/nvim-lspinstall' }
 		use { "neovim/nvim-lspconfig" }
-		use 'kabouzeid/nvim-lspinstall'
+		use { 'hrsh7th/nvim-compe' }
     end
 )

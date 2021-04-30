@@ -1,27 +1,28 @@
--- https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
-local sumneko_root_path = DATA_PATH .. "/lspinstall/lua"
-local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
+-- npm install -g typescript typescript-language-server
+-- require'snippets'.use_suggested_mappings()
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true;
+-- local on_attach_common = function(client)
+-- print("LSP Initialized")
+-- require'completion'.on_attach(client)
+-- require'illuminate'.on_attach(client)
+-- end
 
-require'lspconfig'.sumneko_lua.setup {
-    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
-    on_attach = require'lsp'.common_on_attach,
-    settings = {
-        Lua = {
-            runtime = {
-                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = 'LuaJIT',
-                -- Setup your lua path
-                path = vim.split(package.path, ';')
-            },
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim'}
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand($VIMRUNTIME/lua/vim/lsp')] = true},
-                maxPreload = 10000
-            }
-        }
+require'lspconfig'.tsserver.setup {
+    cmd = {DATA_PATH .. "/lspinstall/typescript/node_modules/.bin/typescript-language-server", "--stdio"},
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+    on_attach = require'lsp'.tsserver_on_attach,
+    -- This makes sure tsserver is not used for formatting (I prefer prettier)
+    -- on_attach = require'lsp'.common_on_attach,
+    root_dir = require('lspconfig/util').root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
+    settings = {documentFormatting = false},
+   handlers = {
+        ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+            virtual_text = O.tsserver.diagnostics.virtual_text,
+            signs = O.tsserver.diagnostics.signs,
+            underline = O.tsserver.diagnostics.underline,
+            update_in_insert = true
+
+        })
     }
-}
+} 

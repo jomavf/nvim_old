@@ -75,6 +75,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
