@@ -33,18 +33,26 @@ vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when th
 return require("packer").startup(
     function(use)
 	-- Packer can manage itself as an optional plugin
-        use "wbthomason/packer.nvim"
+	use "wbthomason/packer.nvim"
+	use 'morhetz/gruvbox'
 
-        use 'morhetz/gruvbox'
     -- Explorer
-        use "kyazdani42/nvim-tree.lua"
-        use { "kyazdani42/nvim-web-devicons" }
+	use "kyazdani42/nvim-tree.lua"
+	use { "kyazdani42/nvim-web-devicons" }
+
     -- LSP
-		use { 'kabouzeid/nvim-lspinstall' }
-		use { "neovim/nvim-lspconfig" }
-		use { 'hrsh7th/nvim-compe' }
+	use { 'kabouzeid/nvim-lspinstall' }
+	use { "neovim/nvim-lspconfig" }
+	use { 'hrsh7th/nvim-compe' }
 
 	-- Treesitter
-	   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+
+	-- Telescope
+	use {
+	  'nvim-telescope/telescope.nvim',
+	  requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+	}
+
     end
 )

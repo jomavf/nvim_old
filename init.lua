@@ -8,6 +8,7 @@ require('colorscheme')
 require('p-nvimtree')
 require('p-lspinstall')
 require('p-lspcompe')
+require('p-telescope')
 
 -- LSP
 require('lsp')
