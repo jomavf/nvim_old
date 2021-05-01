@@ -15,3 +15,4 @@ lua-language-server/
 spell/
 nv-settings.lua
 lv-settings.lua
+.DS_Store
