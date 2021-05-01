@@ -1,22 +1,31 @@
-vim.wo.wrap = false -- Display long lines as just one line
-vim.cmd('syntax on') -- syntax highlighting
-vim.o.fileencoding = "utf-8" -- The encoding written to file
-vim.o.cmdheight = 2 -- More space for displaying messages
-vim.o.splitbelow = true -- Horizontal splits will automatically be below
-vim.cmd('set ts=4') -- Insert 2 spaces for a tab
-vim.cmd('set sw=4') -- Change the number of space characters inserted for indentation
-vim.bo.expandtab = true -- Converts tabs to spaces
-vim.bo.smartindent = true -- Makes indenting smart
-vim.wo.number = true -- set numbered lines
-vim.wo.relativenumber = true -- set relative number
-vim.o.backup = false -- This is recommended by coc
-vim.o.writebackup = false -- This is recommended by coc
-vim.wo.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
-vim.o.updatetime = 300 -- Faster completion
-vim.o.timeoutlen = 500 -- By default timeoutlen is 1000 ms
-vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
-vim.o.guifont = "FiraCode Nerd Font"
-vim.o.hidden = true 
-vim.o.t_Co = "256" -- Support 256 colors
+-- vim.o for setting global options
+-- vim.bo for setting buffer-scoped options
+-- vim.wo for setting window-scoped options
+local vimGlobal = vim
+
+vimGlobal.o.fileencoding = "utf-8" -- The encoding written to file
+vimGlobal.o.cmdheight = 2 -- More space for displaying messages
+vimGlobal.o.splitbelow = true -- Horizontal splits will automatically be below
+vimGlobal.o.backup = false -- This is recommended by coc
+vimGlobal.o.writebackup = false -- This is recommended by coc
+vimGlobal.o.updatetime = 300 -- Faster completion
+vimGlobal.o.timeoutlen = 500 -- By default timeoutlen is 1000 ms
+vimGlobal.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
+vimGlobal.o.guifont = "FiraCode Nerd Font"
+vimGlobal.o.hidden = true 
+vimGlobal.o.t_Co = "256" -- Support 256 colors
+vimGlobal.o.scrolloff = 5
+
+vimGlobal.bo.expandtab = true -- Converts tabs to spaces
+vimGlobal.bo.smartindent = true -- Makes indenting smart
+
+vimGlobal.wo.number = true -- set numbered lines
+vimGlobal.wo.relativenumber = true -- set relative number
+vimGlobal.wo.wrap = false -- Display long lines as just one line
+vimGlobal.wo.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
+vimGlobal.wo.cursorline = true -- Enable highlighting of the current line
+
+vimGlobal.cmd('syntax on') -- syntax highlighting
+vimGlobal.cmd('set ts=4') -- Insert 2 spaces for a tab
+vimGlobal.cmd('set sw=4') -- Change the number of space characters inserted for indentation
 -- vim.api.nvim_command('set cursorline')
-vim.wo.cursorline = true -- Enable highlighting of the current line
