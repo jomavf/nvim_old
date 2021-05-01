@@ -25,7 +25,6 @@ vim.api.nvim_set_keymap('v', '>', '>gv', {noremap = true, silent = true})
 -- I hate escape
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})
 
 -- Move selected line / block of text in visual mode
 vim.api.nvim_set_keymap('v', 'K', ':move \'<-2<CR>gv-gv', {noremap = true, silent = true})
