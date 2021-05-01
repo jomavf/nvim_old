@@ -43,5 +43,8 @@ return require("packer").startup(
 		use { 'kabouzeid/nvim-lspinstall' }
 		use { "neovim/nvim-lspconfig" }
 		use { 'hrsh7th/nvim-compe' }
+
+	-- Treesitter
+	   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     end
 )

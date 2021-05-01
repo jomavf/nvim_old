@@ -91,6 +91,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
