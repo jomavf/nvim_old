@@ -17,9 +17,6 @@ vimGlobal.o.scrolloff = 5
 vimGlobal.o.wildmode = "list:longest"
 vimGlobal.o.swapfile = false
 vimGlobal.o.backup = false -- This is recommended by coc
-vimGlobal.o.undodir= "~/.config/nvim/undodir"
-vimGlobal.o.undofile= true
-vimGlobal.o.undolevels = 1000
 
 vimGlobal.bo.expandtab = true -- Converts tabs to spaces
 vimGlobal.bo.smartindent = true -- Makes indenting smart
@@ -33,4 +30,5 @@ vimGlobal.wo.cursorline = true -- Enable highlighting of the current line
 vimGlobal.cmd('syntax on') -- syntax highlighting
 vimGlobal.cmd('set ts=4') -- Insert 2 spaces for a tab
 vimGlobal.cmd('set sw=4') -- Change the number of space characters inserted for indentation
--- vim.api.nvim_command('set cursorline')
+vimGlobal.cmd('set undodir=~/.config/nvim/undodir')
+vimGlobal.cmd('set undofile')
