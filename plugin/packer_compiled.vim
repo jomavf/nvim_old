@@ -71,6 +71,10 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
+  ["galaxyline.nvim"] = {
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/gruvbox"
@@ -114,6 +118,14 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   }
 }
 

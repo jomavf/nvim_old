@@ -8,26 +8,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
     execute "packadd packer.nvim"
 end
 
---- Check if a file or directory exists in this path
-local function require_plugin(plugin)
-    local plugin_prefix = fn.stdpath("data") .. "/site/pack/packer/opt/"
-
-    local plugin_path = plugin_prefix .. plugin .. "/"
-    --	print('test '..plugin_path)
-    local ok, err, code = os.rename(plugin_path, plugin_path)
-    if not ok then
-        if code == 13 then
-            -- Permission denied, but it exists
-            return true
-        end
-    end
-    --	print(ok, err, code)
-    if ok then
-        vim.cmd("packadd " .. plugin)
-    end
-    return ok, err, code
-end
-
 vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
 
 return require("packer").startup(
@@ -44,6 +24,7 @@ return require("packer").startup(
 	use { 'kabouzeid/nvim-lspinstall' }
 	use { "neovim/nvim-lspconfig" }
 	use { 'hrsh7th/nvim-compe' }
+	use { "hrsh7th/vim-vsnip" }
 
 	-- Treesitter
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
@@ -57,5 +38,9 @@ return require("packer").startup(
 	-- Git Fugitive
 	use { 'tpope/vim-fugitive' }
 
+	-- Status Bar
+	use {
+		'glepnir/galaxyline.nvim',
+	}
     end
 )

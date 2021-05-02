@@ -13,6 +13,9 @@ require('p-telescope')
 -- Git
 require('p-fugitive')
 
--- LSP
+-- Status Bar
+require('p-galaxyline')
+
+-- LSP--
 require('lsp')
 require('lsp.lua-ls')
