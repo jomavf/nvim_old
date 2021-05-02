@@ -54,5 +54,8 @@ return require("packer").startup(
 	  requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 	}
 
+	-- Git Fugitive
+	use { 'tpope/vim-fugitive' }
+
     end
 )
