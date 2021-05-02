@@ -11,12 +11,14 @@ vimGlobal.o.updatetime = 300 -- Faster completion
 vimGlobal.o.timeoutlen = 500 -- By default timeoutlen is 1000 ms
 vimGlobal.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 vimGlobal.o.guifont = "FiraCode Nerd Font"
+vimGlobal.o.termguicolors = true -- set term gui colors most terminals support this
 vimGlobal.o.hidden = true
 vimGlobal.o.t_Co = "256" -- Support 256 colors
 vimGlobal.o.scrolloff = 5
 vimGlobal.o.wildmode = "list:longest"
 vimGlobal.o.swapfile = false
 vimGlobal.o.backup = false -- This is recommended by coc
+vimGlobal.o.pumheight = 10 -- Makes popup menu smaller
 
 vimGlobal.bo.expandtab = true -- Converts tabs to spaces
 vimGlobal.bo.smartindent = true -- Makes indenting smart
@@ -30,5 +32,6 @@ vimGlobal.wo.cursorline = true -- Enable highlighting of the current line
 vimGlobal.cmd('syntax on') -- syntax highlighting
 vimGlobal.cmd('set ts=4') -- Insert 2 spaces for a tab
 vimGlobal.cmd('set sw=4') -- Change the number of space characters inserted for indentation
-vimGlobal.cmd('set undodir=~/.config/nvim/undodir')
+vimGlobal.cmd('set undodir=~/.config/nvim/.undodir')
 vimGlobal.cmd('set undofile')
+vimGlobal.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
