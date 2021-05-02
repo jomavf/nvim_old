@@ -13,7 +13,5 @@ pack/
 lua-language-server/
 .language-servers/
 spell/
-nv-settings.lua
-lv-settings.lua
 .DS_Store
 undordir
