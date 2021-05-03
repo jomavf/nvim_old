@@ -17,4 +17,5 @@ require('p-autopairs')
 -- LSP--
 require('lsp')
 require('lsp.lua-ls')
+require('lsp.js-ts-ls')
 

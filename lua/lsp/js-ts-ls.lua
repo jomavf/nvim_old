@@ -16,7 +16,7 @@ require'lspconfig'.tsserver.setup {
     -- on_attach = require'lsp'.common_on_attach,
     root_dir = require('lspconfig/util').root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
     settings = {documentFormatting = false},
-   handlers = {
+    handlers = {
         ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
             virtual_text = O.tsserver.diagnostics.virtual_text,
             signs = O.tsserver.diagnostics.signs,
@@ -25,4 +25,4 @@ require'lspconfig'.tsserver.setup {
 
         })
     }
-} 
+}
