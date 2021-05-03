@@ -8,15 +8,10 @@ require('colorscheme')
 require('p-nvimtree')
 require('p-lspinstall')
 require('p-lspcompe')
+require('p-treesitter')
 require('p-telescope')
-
--- Git
 require('p-fugitive')
-
--- Status Bar
 require('p-galaxyline')
-
--- Autopairs
 require('p-autopairs')
 
 -- LSP--
