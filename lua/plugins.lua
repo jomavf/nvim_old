@@ -42,5 +42,6 @@ return require("packer").startup(
 	use {
 		'glepnir/galaxyline.nvim',
 	}
+	use {"windwp/nvim-autopairs" }
     end
 )

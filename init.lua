@@ -16,6 +16,10 @@ require('p-fugitive')
 -- Status Bar
 require('p-galaxyline')
 
+-- Autopairs
+require('p-autopairs')
+
 -- LSP--
 require('lsp')
 require('lsp.lua-ls')
+
