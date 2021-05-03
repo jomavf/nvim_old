@@ -18,4 +18,4 @@ require('p-autopairs')
 require('lsp')
 require('lsp.lua-ls')
 require('lsp.js-ts-ls')
-
+require('lsp.vue-ls')
