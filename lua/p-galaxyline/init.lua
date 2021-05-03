@@ -2,25 +2,26 @@ local gl = require('galaxyline')
 -- get my theme in galaxyline repo
 -- local colors = require('galaxyline.theme').default
 local colors = {
-    -- bg = '#2E2E2E',
-    bg = '#292D38',
-    yellow = '#DCDCAA',
-    dark_yellow = '#D7BA7D',
-    cyan = '#4EC9B0',
-    green = '#608B4E',
-    light_green = '#B5CEA8',
-    string_orange = '#CE9178',
-    orange = '#FF8800',
-    purple = '#C586C0',
-    magenta = '#D16D9E',
-    grey = '#858585',
-    blue = '#569CD6',
-    vivid_blue = '#4FC1FF',
-    light_blue = '#9CDCFE',
-    red = '#D16969',
-    error_red = '#F44747',
-    info_yellow = '#FFCC66'
+	-- bg = '#2E2E2E',
+	bg = '#292D38',
+	yellow = '#DCDCAA',
+	dark_yellow = '#D7BA7D',
+	cyan = '#4EC9B0',
+	green = '#608B4E',
+	light_green = '#B5CEA8',
+	string_orange = '#CE9178',
+	orange = '#FF8800',
+	purple = '#C586C0',
+	magenta = '#D16D9E',
+	grey = '#858585',
+	blue = '#569CD6',
+	vivid_blue = '#4FC1FF',
+	light_blue = '#9CDCFE',
+	red = '#D16969',
+	error_red = '#F44747',
+	info_yellow = '#FFCC66'
 }
+
 local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree', 'vista', 'dbui', 'packer'}
@@ -57,13 +58,20 @@ gls.left[1] = {
         highlight = {colors.red, colors.bg}
     }
 }
-print(vim.fn.getbufvar(0, 'ts'))
 vim.fn.getbufvar(0, 'ts')
 
 gls.left[2] = {
+  FileName = {
+    provider = 'FileName',
+    condition = condition.buffer_not_empty,
+    highlight = {colors.magenta,colors.bg,'bold'}
+  }
+}
+
+gls.left[3] = {
     GitIcon = {
         provider = function()
-            return ' '
+            return ' '
         end,
         condition = condition.check_git_workspace,
         separator = ' ',
@@ -72,17 +80,17 @@ gls.left[2] = {
     }
 }
 
-gls.left[3] = {
+gls.left[4] = {
     GitBranch = {
         provider = 'GitBranch',
         condition = condition.check_git_workspace,
-        separator = ' ',
+        separator = '',
         separator_highlight = {'NONE', colors.bg},
-        highlight = {colors.grey, colors.bg}
+        highlight = {colors.orange, colors.bg}
     }
 }
 
-gls.left[4] = {
+gls.left[5] = {
     DiffAdd = {
         provider = 'DiffAdd',
         condition = condition.hide_in_width,
@@ -90,7 +98,7 @@ gls.left[4] = {
         highlight = {colors.green, colors.bg}
     }
 }
-gls.left[5] = {
+gls.left[6] = {
     DiffModified = {
         provider = 'DiffModified',
         condition = condition.hide_in_width,
@@ -98,7 +106,8 @@ gls.left[5] = {
         highlight = {colors.blue, colors.bg}
     }
 }
-gls.left[6] = {
+
+gls.left[7] = {
     DiffRemove = {
         provider = 'DiffRemove',
         condition = condition.hide_in_width,
@@ -172,13 +181,6 @@ gls.right[9] = {
 }
 
 gls.right[10] = {
-    FileEncode = {
-        provider = 'FileEncode',
-        condition = condition.hide_in_width,
-        separator = ' ',
-        separator_highlight = {'NONE', colors.bg},
-        highlight = {colors.grey, colors.bg}
-    }
 }
 
 gls.right[11] = {
