@@ -7,8 +7,9 @@
 -- require'completion'.on_attach(client)
 -- require'illuminate'.on_attach(client)
 -- end
+local lspconfig = require('lspconfig')
 
-require'lspconfig'.tsserver.setup {
+lspconfig.tsserver.setup {
     cmd = {DATA_PATH .. "/lspinstall/typescript/node_modules/.bin/typescript-language-server", "--stdio"},
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
     on_attach = require'lsp'.tsserver_on_attach,
@@ -18,11 +19,10 @@ require'lspconfig'.tsserver.setup {
     settings = {documentFormatting = false},
     handlers = {
         ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-            virtual_text = O.tsserver.diagnostics.virtual_text,
-            signs = O.tsserver.diagnostics.signs,
-            underline = O.tsserver.diagnostics.underline,
+			virtual_text = true,
+            signs = true,
+            underline = true,
             update_in_insert = true
-
         })
     }
 }
