@@ -35,3 +35,4 @@ vimGlobal.cmd('set sw=4') -- Change the number of space characters inserted for 
 vimGlobal.cmd('set undodir=~/.config/nvim/.undodir')
 vimGlobal.cmd('set undofile')
 vimGlobal.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
+vimGlobal.cmd('set nohlsearch')
