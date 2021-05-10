@@ -14,4 +14,4 @@ lua-language-server/
 .language-servers/
 spell/
 .DS_Store
-.undodir/*
+.undodir
