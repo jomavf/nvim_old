@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time("Luarocks path setup", true)
-local package_path_str = "/Users/jose.veliz/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/jose.veliz/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/jose.veliz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/jose.veliz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/jose.veliz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/joseveliz/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/joseveliz/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/joseveliz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/joseveliz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/joseveliz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -73,59 +73,63 @@ time("Defining packer_plugins", true)
 _G.packer_plugins = {
   ["galaxyline.nvim"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   gruvbox = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/gruvbox"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "/Users/jose.veliz/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+    path = "/Users/joseveliz/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   }
 }
 
