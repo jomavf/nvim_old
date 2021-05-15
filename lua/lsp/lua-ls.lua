@@ -2,10 +2,12 @@
 local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
 
+print(vim.loop.os_homedir() .. '.local/share/nvim/lspinstall/lua/sumneko-lua-language-server')
+
 if not lspconfig.sumneko_lua then
 	configs.sumneko_lua = {
 		default_config = {
-			cmd = {'/Users/jose.veliz/.local/share/nvim/lspinstall/lua/sumneko-lua-language-server'};
+			cmd = { vim.loop.os_homedir() .. '/.local/share/nvim/lspinstall/lua/sumneko-lua-language-server'};
 			filetypes = {'lua'};
 			root_dir = function(fname)
 			  return lspconfig.util.find_git_ancestor(fname) or vim.loop.os_homedir()
@@ -35,7 +37,7 @@ end
 
 require('lspconfig').sumneko_lua.setup {
 	on_attach = require'lsp'.common_on_attach,
-	cmd = {'/Users/jose.veliz/.local/share/nvim/lspinstall/lua/sumneko-lua-language-server'};
+	cmd = {vim.loop.os_homedir() .. '/.local/share/nvim/lspinstall/lua/sumneko-lua-language-server'};
 	filetypes = {'lua'};
 	root_dir = function(fname)
 	  return lspconfig.util.find_git_ancestor(fname) or vim.loop.os_homedir()
