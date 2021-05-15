@@ -2,8 +2,6 @@
 local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
 
-print(vim.loop.os_homedir() .. '.local/share/nvim/lspinstall/lua/sumneko-lua-language-server')
-
 if not lspconfig.sumneko_lua then
 	configs.sumneko_lua = {
 		default_config = {
