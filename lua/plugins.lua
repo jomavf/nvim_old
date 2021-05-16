@@ -43,5 +43,9 @@ return require("packer").startup(
 		'glepnir/galaxyline.nvim',
 	}
 	use {"windwp/nvim-autopairs" }
+
+	-- Emmet
+ --  	use {"mattn/emmet-vim" }
+
     end
 )
