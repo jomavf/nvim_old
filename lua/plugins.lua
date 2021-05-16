@@ -45,7 +45,10 @@ return require("packer").startup(
 	use {"windwp/nvim-autopairs" }
 
 	-- Emmet
- --  	use {"mattn/emmet-vim" }
+ 	use {"mattn/emmet-vim" }
+
+	-- close tag
+	use { "alvan/vim-closetag"}
 
     end
 )

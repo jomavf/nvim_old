@@ -13,6 +13,7 @@ require('p-telescope')
 require('p-fugitive')
 require('p-galaxyline')
 require('p-autopairs')
+require('p-closetag')
 
 -- LSP--
 require('lsp')

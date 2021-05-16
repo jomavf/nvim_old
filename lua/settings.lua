@@ -37,6 +37,6 @@ vimGlobal.cmd('set undodir=~/.config/nvim/.undodir')
 vimGlobal.cmd('set undofile')
 vimGlobal.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
 vimGlobal.cmd('set nohlsearch')
-vimGlobal.cmd('set autochdir')
+vimGlobal.cmd('autocmd BufEnter * silent! lcd %:p:h') -- change curr dir for telescope
 vimGlobal.cmd('set noswapfile')
 vimGlobal.cmd('set nobackup')
