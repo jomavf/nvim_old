@@ -30,9 +30,13 @@ vimGlobal.wo.signcolumn = "yes" -- Always show the signcolumn, otherwise it woul
 vimGlobal.wo.cursorline = true -- Enable highlighting of the current line
 
 vimGlobal.cmd('syntax on') -- syntax highlighting
-vimGlobal.cmd('set ts=4') -- Insert 2 spaces for a tab
-vimGlobal.cmd('set sw=4') -- Change the number of space characters inserted for indentation
+-- https://www.youtube.com/watch?v=H-4H6L8IcGM&t=444s  -- .editorconfig => 8:30 youtube video magikas
+vimGlobal.cmd('set ts=2') -- Insert 2 spaces for a tab
+vimGlobal.cmd('set sw=2') -- Change the number of space characters inserted for indentation
 vimGlobal.cmd('set undodir=~/.config/nvim/.undodir')
 vimGlobal.cmd('set undofile')
 vimGlobal.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
 vimGlobal.cmd('set nohlsearch')
+vimGlobal.cmd('set autochdir')
+vimGlobal.cmd('set noswapfile')
+vimGlobal.cmd('set nobackup')

@@ -21,5 +21,5 @@
 local vimGlobal = vim
 vimGlobal.api.nvim_command("let g:user_emmet_install_global = 0")
 vimGlobal.api.nvim_command("autocmd FileType html,css EmmetInstall")
-vimGlobal.api.nvim_command("let g:user_emmet_leader_key='<C-M>'")
+vimGlobal.api.nvim_command("let g:user_emmet_leader_key='<C-m>'")
 
